@@ -6958,7 +6958,7 @@ TimeGrid.mixin({
 				) +
 			'>' +
 				'<div class="fc-content">' +
-				  '<div class="place-color fc-place-'+event.place_id+'">'+
+				  '<div class="fc-place-'+event.place_id+'">'+
 				  '</div>' +
 					(timeText ?
 						'<div class="fc-time"' +
@@ -6976,7 +6976,7 @@ TimeGrid.mixin({
 						''
 					) +
 				'</div>' +
-				'<div class="fc-bg"/>' +
+				'<div class="fc-bg fc-place-'+event.place_id+'"/>' +
 				/* TODO: write CSS for this
 				(isResizableFromStart ?
 					'<div class="fc-resizer fc-start-resizer" />' :

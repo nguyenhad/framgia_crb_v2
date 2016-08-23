@@ -69,7 +69,7 @@
     }
   }
 
-  a.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.color-9.fc-draggable.fc-resizable {
+  a.fc-time-grid-event.fc-v-event.fc-event.fc-start.fc-end.fc-draggable.fc-resizable {
     right: 5% !important;
   }
 
@@ -751,7 +751,7 @@ span.ui-icon.ui-icon-circle-triangle-e {
 }
 
 .checkbox-color .tag {
-  color: green;
+  /*color: green;*/
   display: block;
   float: left;
   font-weight: bold;
@@ -769,7 +769,7 @@ span.ui-icon.ui-icon-circle-triangle-e {
 
 .input-assumpte + label {
   -webkit-appearance: none;
-  background-color: green;
+  /*background-color: green;*/
   border: 1px solid #cacece;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
   padding: 9px;
@@ -791,7 +791,7 @@ span.ui-icon.ui-icon-circle-triangle-e {
   float: left;
   padding-top: 5px;
 }
-
+/*
 .color-1 {
   background-color: #AC725E!important;
   border-color: #AC725E;
@@ -851,6 +851,7 @@ span.ui-icon.ui-icon-circle-triangle-e {
   background-color: #FAD165!important;
   border-color: #FAD165;
 }
+*/
 
 .fc-right {
   .fc-button {
@@ -1024,41 +1025,45 @@ span.ui-icon.ui-icon-circle-triangle-e {
 }
 
 .fc-time-grid-event{
-  border-color: #ffffff !important;
+  /*border-color: #ffffff !important;*/
   border-width: 2px;
 }
 
-.place-color {
-  height: 3px;
-}
+.fc-bg
+  .fc-place-1{
+    background-color: #00CED1;
+  }
+  .fc-place-2{
+    background: #FF7F50;
+  }
+  .fc-place-3{
+    background: #3CB371;
+  }
+  .fc-place-4{
+    background: #66CDAA;
+  }
+  .fc-place-5{
+    background: #CD853F;
+  }
+  .fc-place-6{
+    background: #2E8B57;
+  }
+  .fc-place-7{
+    background: #DAA520;
+  }
+  .fc-place-8{
+    background: #DB7093;
+  }
+  .fc-place-9{
+    background: #F08080;
+  }
+  .fc-place-10{
+    background: #FF69B4;
+  }
 
-.fc-place-1{
-  background-color: #00CED1;
-}
-.fc-place-2{
-  background-color: #FF7F50;
-}
-.fc-place-3{
-  background-color: #3CB371;
-}
-.fc-place-4{
-  background-color: #66CDAA;
-}
-.fc-place-5{
-  background-color: #CD853F;
-}
-.fc-place-6{
-  background-color: #2E8B57;
-}
-.fc-place-7{
-  background-color: #DAA520;
-}
-.fc-place-8{
-  background-color: #DB7093;
-}
-.fc-place-9{
-  background-color: #F08080;
-}
-.fc-place-10{
-  background-color: #FF69B4;
+
+
+.fc-time-grid-event .fc-time {
+  font-weight: bold;
+  font-size: 0.925em;
 }
