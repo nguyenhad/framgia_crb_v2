@@ -357,6 +357,8 @@ $(document).on('page:change', function() {
           all_day: allDay,
           exception_type: exception_type,
           end_repeat: event.end_repeat,
+          name_place: event.name_place,
+          place_id: event.place_id,
         },
         persisted: event.persisted ? 1 : 0,
         is_drop: is_drop,

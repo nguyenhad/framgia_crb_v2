@@ -20,38 +20,6 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :color %>
-    <div id="cal-color">
-      <div class="checkbox-color">
-        <%= f.hidden_field :color_id %>
-        <% if is_edit_form? action_name %>
-          <% @colors.each_with_index do |color, index| %>
-            <div class="<%= "l-color" %>" >
-              <input type="checkbox" class="input-assumpte"
-                id="<%= "input-color-#{color.id}" %>" rel="<%= color.id %>"
-                <%= "checked" if index == @user_calendar.color_id - 1 %>>
-              <label class="<%= "color-#{color.id}" %>"
-                for="<%= "input-color-#{color.id}" %>">
-              </label>
-            </div>
-          <% end %>
-        <% else %>
-          <% @colors.each_with_index do |color, index| %>
-            <div class="<%= "l-color" %>" >
-              <input type="checkbox" class="input-assumpte"
-                id="<%= "input-color-#{color.id}" %>" rel="<%= color.id %>"
-                <%= "checked" if index == 9 %>>
-              <label class="<%= "color-#{color.id}" %>"
-                for="<%= "input-color-#{color.id}" %>">
-              </label>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-group">
     <%= f.label :description %>
     <%= f.text_area :description, class: "form-control" %>
   </div>

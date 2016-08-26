@@ -37,6 +37,8 @@ $(document).on('page:change', function() {
             return {
               title: event.title,
               start: event.start_date,
+              place_id: event.place_id,
+              name_place: event.name_place,
               end: event.finish_date,
               id: event.id,
               user_id: event.user_id,

@@ -24,22 +24,6 @@
       <%= f.text_field :name, required: true, class: "form-control",
         disabled: true %>
     </div>
-
-    <div class="form-group">
-      <div id="cal-color">
-        <%= f.label :color, class:"l-left" %>
-        <div class="checkbox-color">
-          <div class="<%= "l-color" %>" >
-            <input type="checkbox" class="input-assumpte"
-              id="<%= "input-color-#{@calendar.color_id}" %>" rel="<%= @calendar.color_id %>">
-            <label class="<%= "color-#{@calendar.color_id}" %>"
-              for="<%= "input-color-#{@calendar.color_id}" %>">
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="form-group" >
       <%= f.label :description %>
       <%= f.text_area :description, required: true, class: "form-control",

@@ -106,19 +106,7 @@
     <div class="disable">
       <%#= link_to t("calendar.sub_menu.edit_notification"), "#" %>
     </div> -->
-    <div class="divider"></div>
-    <div class="checkbox-color">
-      <% @colors.each_with_index do |color, index| %>
-        <div class="<%= "l-color" %>" >
-          <input type="checkbox" class="input-assumpte"
-            id="<%= "input-color-#{color.id}" %>" rel="<%= color.id %>">
-          <label class="<%= "color-#{color.id}" %>" for="<%= "input-color-#{color.id}" %>"></label>
-        </div>
-        <% if((index + 1) % 6 == 0) %>
-          <br>
-        <% end %>
-      <% end %>
-    </div>
+
   </div>
   <div id="dialog_overlap_confirm" class="hidden">
     <%= t"events.overlap.do_you_want_create" %>
