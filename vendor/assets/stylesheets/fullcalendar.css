@@ -46,7 +46,7 @@ body .fc { /* extra precedence to overcome jqui */
 }
 
 .fc-unthemed .fc-today {
-	background: #fcf8e3;
+	background:	#F5F5F5;
 }
 
 .fc-highlight { /* when user is selecting cells */
@@ -852,7 +852,7 @@ a.fc-more:hover {
 
 .fc .fc-axis { /* .fc to overcome default cell styles */
 	vertical-align: middle;
-	padding: 0 4px;
+	padding: 0 5px;
 	white-space: nowrap;
 }
 
@@ -944,7 +944,7 @@ a.fc-more:hover {
 --------------------------------------------------------------------------------------------------*/
 
 .fc-time-grid .fc-slats td {
-	height: 1.5em;
+	height: 1.8em;
 	border-bottom: 0; /* each cell is responsible for its top border */
 }
 

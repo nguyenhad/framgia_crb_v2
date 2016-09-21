@@ -110,6 +110,10 @@ class Event < ActiveRecord::Base
         [Event.exception_types[:delete_only],
         Event.exception_types[:delete_all_follow]], exception_time
     end
+
+    def event_days
+      Event.pluck("DISTINCT role")
+    end
   end
 
   Event.repeat_types.keys.each do |repeat_type|

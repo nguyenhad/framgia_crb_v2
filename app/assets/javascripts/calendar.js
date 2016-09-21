@@ -12,13 +12,18 @@ $(document).on('page:change', function() {
     header: {
       left: 'prev,next today',
       center: 'title',
-      right: 'agendaDay,agendaWeek,month,agendaFourDay'
+      right: 'agendaDay,agendaWeek,month,agendaFourDay," ",settings',
     },
     views: {
       agendaFourDay: {
         type: 'agenda',
         duration: {days: 4},
         buttonText: '4 days'
+      }
+    },
+    customButtons: {
+      settings: {
+        text: 'Settings',
       }
     },
     borderColor: '#ffffff',
@@ -988,6 +993,9 @@ $(document).on('page:change', function() {
     var allDay = current_event.allDay;
     confirm_update_popup(current_event, allDay, current_event.end);
   });
+
+  $('.fc-settings-button').hide();
+  $('.fc-right').append($('#settings'));
 });
 
 function validateEmail(email) {

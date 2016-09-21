@@ -6,6 +6,17 @@
   </div>
   <ul>
     <% if user_signed_in? %>
+      <li class="setting-box">
+        <a class="setting" id="settings" href="#" name="Setting">
+        </a>
+          <div class="sub-setting">
+            <%= link_to t("calendars.push"), "/auth/google_oauth2?push=true" %>
+          </div>
+          <div class="sub-setting">
+            <%= link_to t("calendars.pull"), "/auth/google_oauth2?pull=true" %>
+          </div>
+        </ul>
+      </li>
       <li class="avatar-box">
         <a class="avatar" id="header-avatar" href="#">
           <%= get_avatar current_user %>
@@ -13,12 +24,6 @@
         <div id="sub-menu-setting" class= "sub-menu sub-menu-hidden">
           <div class="sub-setting">
             <%= link_to t("layout.show"), user_path(current_user) %>
-          </div>
-          <div class="sub-setting">
-            <%= link_to t("calendars.push"), "/auth/google_oauth2?push=true" %>
-          </div>
-          <div class="sub-setting">
-            <%= link_to t("calendars.pull"), "/auth/google_oauth2?pull=true" %>
           </div>
           <div class="sub-setting">
             <%= link_to t("session.link.sign_out"), destroy_user_session_path,
