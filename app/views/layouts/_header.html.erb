@@ -20,9 +20,6 @@
           <div class="sub-setting">
             <%= link_to t("calendars.pull"), "/auth/google_oauth2?pull=true" %>
           </div>
-          <div id="hide-sidebar-link" class="sub-setting">
-            <%= link_to t(".hide_sidebar"), "#" %>
-          </div>
           <div class="sub-setting">
             <%= link_to t("session.link.sign_out"), destroy_user_session_path,
               method: :delete %>

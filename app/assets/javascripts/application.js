@@ -100,29 +100,25 @@ $(document).on('page:change', function() {
 
   flag = parseInt(localStorage.getItem("isHideSidebarFlag"));
   loadSidebar(flag);
-  $('#hide-sidebar-link').click(function(){
-    flag = parseInt(localStorage.getItem("isHideSidebarFlag")) === 0 ? 1 : 0;
-    loadSidebar(flag);
-    localStorage.setItem("isHideSidebarFlag", flag);
 
-    $(this).text(function() {
-      if (flag === 0) {
-        return I18n.t("layouts.header.hide_sidebar")
-      } else {
-        return I18n.t("layouts.header.show_sidebar")
-      }
-    });
+  $(document).keydown(function(e){
+    if (e.which === 39 && e.ctrlKey){
+      flag = 1;
+      loadSidebar(flag);
+    } else if (e.which === 37 && e.ctrlKey){
+      flag = 0;
+      loadSidebar(flag);
+    }
   });
 
   function loadSidebar(flag) {
-    flag === 0 ? $('.hide-sidebar').show(200) : $('.hide-sidebar').hide(200);
-    $('.fc-view-container').animate({marginLeft: flag*-169}, 200);
-    $('#hide-sidebar-link').text(function(){
-      if (flag === 0) {
-        return I18n.t("layouts.header.hide_sidebar")
-      } else {
-        return I18n.t("layouts.header.show_sidebar")
-      }
-    });
+    if (flag === 1) {
+      $('.hide-sidebar').show(200);
+      $('.fc-view-container').animate({marginLeft: 0}, 200);
+    } else {
+      $('.hide-sidebar').hide(200);
+      $('.fc-view-container').animate({marginLeft: -169}, 200);
+    }
+    localStorage.setItem("isHideSidebarFlag", flag);
   }
 });
